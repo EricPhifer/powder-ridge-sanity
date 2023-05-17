@@ -1,31 +1,38 @@
-// First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator';
-// Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type';
-// Then we give our schema to the builder and provide the result to Sanity
 
-import faqs from './faqs';
+// Pages
+import faq from './faqs';
 import ccrs from './ccrs';
-import acc from './acc';
 import minutes from './minutes';
+import homepage from './homepage';
+import committees from './committees';
 import boardMembers from './boardMembers';
+// Components & Support
+import Members from '../components/Members';
+import Expenses from '../components/Expenses';
 import MotionMade from '../components/MotionMade';
+import HomeContent from '../components/HomeContent';
 import OtherMembers from '../components/OtherMembers';
-import AccMembers from '../components/AccMembers';
+import treasurersReport from './treasurersReport';
+// Privacy & Terms
+import privacypolicy from './privacypolicy';
+import termsconditions from './termsconditions';
 
-export default createSchema({
-  // We name our schema
-  name: 'default',
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([
-    boardMembers,
-    acc,
-    faqs,
+export default [
+    // Pages
+    faq,
     ccrs,
     minutes,
+    homepage,
+    committees,
+    boardMembers,
+    // Privacy & Terms
+    privacypolicy,
+    termsconditions,
+    // Components & Support
+    Members,
+    Expenses,
     MotionMade,
+    HomeContent,
     OtherMembers,
-    AccMembers,
-  ]),
-});
+    treasurersReport,
+]

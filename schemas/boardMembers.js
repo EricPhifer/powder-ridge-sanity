@@ -1,5 +1,4 @@
 import { MdFace as icon } from 'react-icons/md';
-// import PhoneNumberDiff from '../components/PhoneNumberDiff';
 
 export default {
   name: 'boardMembers',
