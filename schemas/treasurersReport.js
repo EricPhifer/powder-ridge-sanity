@@ -35,7 +35,7 @@ export default {
       name: 'totalBalance',
       title: 'Total Balance',
       type: 'number',
-      component: { 
+      components: { 
         input: FormatMoney,
       }
     },

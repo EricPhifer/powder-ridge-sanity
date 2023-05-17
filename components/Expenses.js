@@ -21,7 +21,6 @@ export default {
       type: 'number',
       components: {
         input: FormatMoney,
-
       } 
     },
     {
