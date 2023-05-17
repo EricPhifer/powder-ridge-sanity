@@ -2,7 +2,7 @@ import { GrHome as icon } from 'react-icons/gr';
 
 export default {
   name: 'loginhome',
-  title: 'Home Page',
+  title: 'Login Landing',
   type: 'document',
   icon,
   fields: [
