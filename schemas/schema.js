@@ -4,6 +4,8 @@ import faq from './faqs';
 import ccrs from './ccrs';
 import minutes from './minutes';
 import homepage from './homepage';
+import residents from './residents';
+import loginhome from './loginhome';
 import committees from './committees';
 import boardMembers from './boardMembers';
 // Components & Support
@@ -23,6 +25,8 @@ export default [
     ccrs,
     minutes,
     homepage,
+    residents,
+    loginhome,
     committees,
     boardMembers,
     // Privacy & Terms
