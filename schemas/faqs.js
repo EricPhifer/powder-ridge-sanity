@@ -27,6 +27,19 @@ export default {
       type: 'string',
       description: 'What is the answer to the question?',
     },
+    { 
+      name: 'headerimage', 
+      title: 'Header Image', 
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    { 
+      name: 'alt', 
+      title: 'Alternative Text for Logo', 
+      type: 'string' 
+    },
   ],
   preview: {
     select: {

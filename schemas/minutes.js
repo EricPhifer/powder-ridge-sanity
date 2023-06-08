@@ -29,6 +29,19 @@ export default {
         maxLength: 100,
       },
     },
+    { 
+      name: 'headerimage', 
+      title: 'Header Image', 
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    { 
+      name: 'alt', 
+      title: 'Alternative Text for Logo', 
+      type: 'string' 
+    },
     {
       name: 'members',
       title: 'Members in Attendance',

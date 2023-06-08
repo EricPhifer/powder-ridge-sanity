@@ -18,6 +18,9 @@ import treasurersReport from './treasurersReport';
 // Privacy & Terms
 import privacypolicy from './privacypolicy';
 import termsconditions from './termsconditions';
+// Navigation
+import navigation from './navigation';
+import PageLinks from '../components/PageLinks';
 
 export default [
     // Pages
@@ -39,4 +42,7 @@ export default [
     HomeContent,
     OtherMembers,
     treasurersReport,
+    // Navigation
+    PageLinks,
+    navigation,
 ]
