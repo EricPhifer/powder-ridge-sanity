@@ -22,7 +22,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'welcome',
+      title: 'heromsg',
       media: 'image',
     },
   },
