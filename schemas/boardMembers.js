@@ -12,19 +12,6 @@ export default {
       type: 'string',
       description: 'Name of the Board Member',
     },
-    { 
-      name: 'headerimage', 
-      title: 'Header Image', 
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    },
-    { 
-      name: 'alt', 
-      title: 'Alternative Text for Logo', 
-      type: 'string' 
-    },
     {
       name: 'slug',
       title: 'Slug',

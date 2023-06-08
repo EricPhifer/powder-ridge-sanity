@@ -21,8 +21,18 @@ import termsconditions from './termsconditions';
 // Navigation
 import navigation from './navigation';
 import PageLinks from '../components/PageLinks';
+//Heroes
+import boardhero from './boardhero';
+import ccrhero from './ccrhero';
+import faqhero from './faqhero';
+import minutehero from './minutehero';
 
 export default [
+    // Heroes
+    boardhero,
+    ccrhero,
+    faqhero,
+    minutehero,
     // Pages
     faq,
     ccrs,

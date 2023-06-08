@@ -8,7 +8,7 @@ export default {
   fields: [
     {
       name: 'name',
-      title: 'Name of Organization',
+      title: 'Name of Person that Called the Meeting to Order',
       type: 'string',
     },
     {
@@ -18,6 +18,7 @@ export default {
       options: {
         timeFormat: 'h:mmA',
         dateFormat: 'dddd, MMMM Do YYYY',
+        timeZone: 'America/Denver',
       },
     },
     {
@@ -29,18 +30,10 @@ export default {
         maxLength: 100,
       },
     },
-    { 
-      name: 'headerimage', 
-      title: 'Header Image', 
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    },
-    { 
-      name: 'alt', 
-      title: 'Alternative Text for Logo', 
-      type: 'string' 
+    {
+      name: 'teleconference',
+      title: 'Via Video Chat?',
+      type: 'boolean',
     },
     {
       name: 'members',
@@ -61,27 +54,41 @@ export default {
       ],
     },
     {
-      name: 'quorum',
-      title: 'Number of Members Present',
+      name: 'contributors',
+      title: 'Number of People who Contributed Proxy Information',
       type: 'number',
-      /* What is required minimum? */
     },
     {
-      name: 'quorumReached',
-      title: 'Minimum Number Achieved?',
-      type: 'boolean',
-      description: 'Required minimum present is 3',
-      /* What is required minimum? */
-    },
-    {
-      name: 'addMotion',
-      title: 'Motion Made',
-      type: 'array',
-      of: [
+      name: 'insertReport',
+      title: 'Treasurers Report',
+      type: 'reference',
+      to: [
         {
-          type: 'MotionMade',
+          type: 'treasurersReport',
         },
       ],
+    },
+    {
+      name: 'oldBusiness',
+      title: 'Old Business Notes',
+      type: 'array',
+      of: [{ type: 'text' }],
+    },
+    {
+      name: 'newBusiness',
+      title: 'New Business Notes',
+      type: 'array',
+      of: [{ type: 'text' }],
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: `Enter tags with comma & space between keyword phrases.`,
+      options: {
+        layout: 'tags',
+      },
     },
     {
       name: 'endTime',
@@ -90,21 +97,6 @@ export default {
       options: {
         timeFormat: 'h:mmA',
         dateFormat: 'dddd, MMMM Do YYYY',
-      },
-    },
-    {
-      name: 'tags',
-      title: 'Tags',
-      type: 'array',
-      of: [
-        {
-          type: 'string',
-        },
-      ],
-      // TODO: add a line break in description
-      description: `Keywords for search field. Enter tags with comma & space between words.`,
-      options: {
-        layout: 'tags',
       },
     },
   ],

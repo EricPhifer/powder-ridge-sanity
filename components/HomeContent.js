@@ -16,7 +16,7 @@ export default {
     {
       name: 'contentURL',
       title: 'Link to URL',
-      type: 'url',
+      type: 'string',
     },
   ],
 };

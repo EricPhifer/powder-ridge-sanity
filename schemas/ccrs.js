@@ -27,18 +27,11 @@ export default {
         maxLength: 100,
       },
     },
-    { 
-      name: 'headerimage', 
-      title: 'Header Image', 
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    },
-    { 
-      name: 'alt', 
-      title: 'Alternative Text for Logo', 
-      type: 'string' 
+    {
+      name: 'refIdDisplay',
+      title: 'Document Reference to Display',
+      type: 'string',
+      description: 'What is the reference ID as it should be displayed?',
     },
     {
       name: 'refId',
