@@ -6,6 +6,38 @@ const formatMoney = Intl.NumberFormat('en-US', {
   currency: 'USD',
 }).format;
 
+// export default function FormatMoney(props: StringInputProps) {
+//   const { onChange, value: inputValue = '', elementProps } = props;
+
+//   const handleChange = useCallback(
+//     (event: React.ChangeEvent<HTMLInputElement>) => {
+//       const newValue = event.currentTarget.value.trim();
+//       if (newValue === '') {
+//         onChange(unset());
+//       } else {
+//         const parsedValue = parseInt(newValue, 10);
+//         if (!isNaN(parsedValue)) {
+//           onChange(set(parsedValue));
+//         }
+//       }
+//     },
+//     [onChange]
+//   );
+
+//   return (
+//     <div>
+//       <h2>In US Dollars - {inputValue ? formatMoney(inputValue / 100) : null}</h2>
+//       <p>Enter the amount, with cents and no decimal. It will auto convert above.</p>
+//       <input
+//         {...elementProps}
+//         value={inputValue}
+//         onChange={handleChange}
+//         type='number'
+//       />
+//     </div>
+//   );
+// }
+
 export default function FormatMoney(props: StringInputProps) {
 const {onChange, value = 'number', elementProps } = props
 const handleChange = useCallback(
@@ -14,7 +46,7 @@ const handleChange = useCallback(
   return (
     <div>
       <h2>
-        In US Dollars - {value ? formatMoney(value / 100) : null}
+        In US Dollars - {value ? formatMoney(Number(value) / 100) : null}
       </h2>
       <p>Enter the amount, with cents and no decimal. It will auto convert above.</p>
       <input
@@ -28,8 +60,3 @@ const handleChange = useCallback(
 }
 
 FormatMoney.displayName = 'FormatMoney';
-
-// maybe remove?
-FormatMoney.focus = function () {
-  this._inputElement.focus();
-};
