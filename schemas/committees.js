@@ -46,11 +46,12 @@ export default {
         },
       ],
     },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-      description: 'Tell us a bit about this committee.',
+    { 
+      name: 'description', 
+      title: 'Description', 
+      description: 'Tell us a bit about this person.',
+      type: 'array',
+      of: [{type: 'block'}]
     },
     {
       name: 'email',

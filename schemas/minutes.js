@@ -67,18 +67,18 @@ export default {
           type: 'treasurersReport',
         },
       ],
-    },
-    {
-      name: 'oldBusiness',
-      title: 'Old Business Notes',
+    }, 
+    { 
+      name: 'oldBusiness', 
+      title: 'Old Business Notes', 
       type: 'array',
-      of: [{ type: 'text' }],
+      of: [{type: 'block'}]
     },
     {
       name: 'newBusiness',
       title: 'New Business Notes',
       type: 'array',
-      of: [{ type: 'text' }],
+      of: [{ type: 'block' }],
     },
     {
       name: 'tags',

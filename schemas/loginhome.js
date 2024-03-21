@@ -19,16 +19,11 @@ export default {
         hotspot: true,
       },
     },
-    {
-      name: 'contents',
-      title: 'Content',
+    { 
+      name: 'contents', 
+      title: 'Content', 
       type: 'array',
-      of: [
-        {
-          name: 'content',
-          type: 'text',
-        },
-      ],
+      of: [{type: 'block'}]
     },
   ],
   preview: {

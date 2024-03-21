@@ -21,11 +21,12 @@ export default {
         maxLength: 100,
       },
     },
-    {
-      name: 'answer',
-      title: 'Answer',
-      type: 'string',
+    { 
+      name: 'answer', 
+      title: 'Answer', 
       description: 'What is the answer to the question?',
+      type: 'array',
+      of: [{type: 'block'}]
     },
   ],
   preview: {

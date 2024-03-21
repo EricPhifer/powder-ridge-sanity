@@ -35,11 +35,12 @@ export default {
       type: 'string',
       description: 'What is the Board Members position in the HOA?',
     },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+    { 
+      name: 'description', 
+      title: 'Description', 
       description: 'Tell us a bit about this person.',
+      type: 'array',
+      of: [{type: 'block'}]
     },
     {
       name: 'email',
